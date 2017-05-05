@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="bower_components/angular/angular.min.js"></script>
+
+<style>
+input.ng-invalid {
+    background-color: lightblue;
+}
+</style>
+
+
+  <div ng-app="myApp" ng-controller="myCtrl" >
+<form name="myForm">
+    Email:
+    <input type="email" name="myAddress" ng-model="text">
+    <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+
+    <h1>Status</h1>
+{{myForm.myAddress.$valid}}
+{{myForm.myAddress.$dirty}}
+{{myForm.myAddress.$touched}}
+
+</form>
+
+
+   	<p>Name: <input type="text" ng-model="firstName"></p>
+    <p>The name is <span ng-bind="firstName"></span></p>
+   	<p>{{firstName}}</p>
+    <p>My first expression: {{ 5 + 5 }}</p>
+
+    Quantity: <input type="number"	ng-model="quantity">
+Costs:    <input type="number" ng-model="price">
+
+Total in dollar: {{ quantity * price }}
+
+  </div>
+
+
+
+
+
+<script src="js/demo.js"></script>
+<script>
+
+</script>
+</body>
+</html>

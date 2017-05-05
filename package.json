@@ -1,0 +1,31 @@
+{
+  "name": "template",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine-node **/* ",
+    "forcetest": "jasmine-node **/* ",
+    "lint": "jslint index.js spec/*.js api/*.js controller/*.js",
+    "pretest": "npm run lint",
+    "start": "node index.js | bunyan"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.16.1",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.3.0",
+    "gulp-util": "^3.0.7"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "bunyan": "^1.5.1",
+    "crypto": "0.0.3",
+    "express": "^4.13.3",
+    "jslint": "^0.9.3",
+    "moment": "^2.10.6",
+    "node-persist": "^2.0.7",
+    "swagger-node-express": "^2.1.3"
+  }
+}
